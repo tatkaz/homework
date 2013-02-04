@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tatyana Kazakova: MADLIBS</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #CCCCCC;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	
+	padding-right: 100px;
+	padding-left: 100px;
+	color: #F90;
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #E4E4E4;
+}
+#input li {
+	padding: 0px;
+	display: block;
+	font-size: 0.9em;
+	line-height: 0.7em;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
+
+#nounInput, #verbInput, #adjectiveInput {
+	font-family: verdana;
+	font-size: 1.2em;
+	border: 4px solid #ccc;
+	color: #666;
+	padding: 10px;
+	background-color: #E8E8E8;
+}
+
+.content {
+	padding: 30px 0;
+	background-color: #E5E5E5;
+}
+
+
+h3 span {
+	color: #999;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="content">
+  <h3> <span>Tatyana Kazakova</span></h3>
+  <h1> MADLIBS | Homework Week 1</h1>
+<p>Any body suspended in <span id="noun" class="wrap" style="font-size:1.2em; color:red; font-weight:bold" ></span> will remain in space until made aware of its situation.
+Daffy Duck steps off a cliff, expecting further pastureland. He <span id="verb" class="wrap" style="font-size:1.2em; color:red; font-weight:bold"></span> in midair, soliloquizing flippantly, until he chances to look down. At this point, the </br><span id="adjective" class="wrap" style="font-size:1.2em; color:red; font-weight:bold"></span> principle of 32 feet per second takes over. 
+</p>
+
+
+<div Id="input">
+
+<ul>
+<li><input type="text" name="nounInput" value="Enter a NOUN" id="nounInput"></li><br />
+<li><input type="text" name="verbInput" value="Enter a VERB" id="verbInput"></li><br />
+<li><input type="text" name="adjectiveInput" value="Enter an ADJECTIVE" id="adjectiveInput"></li><br />
+<li><button id="click_me_button" >Click me</button></li>
+</ul>
+</div>
+<script type="text/javascript" charset="utf-8">
+
+//document.getElementById() allows us to get a reference to an element on the page
+var divNoun = document.getElementById("noun");
+var divVerb = document.getElementById("verb");
+var divAdjective = document.getElementById("adjective");
+
+divNoun.innerHTML = " | NOUN | ";
+divVerb.innerHTML = " | VERB | ";
+divAdjective.innerHTML = " | ADJECTIVE | ";
+
+/*var list_of_elements = document.getElementsByTagName('div');*/
+
+var inputNoun = document.getElementById('nounInput');
+var inputVerb = document.getElementById('verbInput');
+var inputAdjective = document.getElementById('adjectiveInput');
+
+var button = document.getElementById('click_me_button');
+button.onclick = function(){
+
+divNoun.innerHTML = inputNoun.value;
+divVerb.innerHTML = inputVerb.value;
+divAdjective.innerHTML = inputAdjective.value;
+
+}
+</script>
+
+    <!-- end .content --></div>
+<!-- end .container --></div>
+</body>
+</html>
